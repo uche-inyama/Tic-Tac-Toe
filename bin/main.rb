@@ -22,7 +22,7 @@ puts "#{player2}\n"
 
 puts "Rules:"
 puts "The game is played one player at a time"
-puts "Each players can choose a name for themselves, however, player-1 and player-2 are default names"
+puts "Each player can choose a name for themselves, however, player-1 and player-2 are default names"
 puts "A move is made when a player chooses a mark on the grid"
 puts "moves cannot be overridden by another player"
 puts "There is a win if a player marks a complete row, column or diagonal space on the grid."
