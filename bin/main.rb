@@ -33,12 +33,15 @@ loop do
             break
         end
     end
-    result = board.game_over
+    result = board.victory
     if !result.nil?
         if result.eql? player1.symbol
             puts "#{player1.name} won"
             break
         end
+    elsif board.tie?
+        puts "It was a tie"
+        break
     end
     loop do
         print "#{player2.name} move (1-9): "
@@ -48,12 +51,15 @@ loop do
             break
         end
     end
-    result = board.game_over
+    result = board.victory
     if !result.nil?
         if result.eql? player2.symbol
             puts "#{player2.name} won"
             break
         end
+    elsif board.tie?
+        puts "It was a tie"
+        break
     end
 end
 
