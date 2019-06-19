@@ -10,7 +10,7 @@ class Player
 
 
 	def make_move(position, board)
-		
+		if board.move_valid?(position)
 	end
 
 end
