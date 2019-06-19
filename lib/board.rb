@@ -26,17 +26,21 @@ class Board
         puts row2
         puts sep
         puts row3
+        print "\n"
     end
 
     def move_valid?(move)
         correct_pos = ("1".."9").include?(move)
-        is_not_occupied = pos[move].eql?(move.to_i)
+        is_not_occupied = pos[move].eql?(move)
         correct_pos and is_not_occupied
     end
 
     def update(position, sym)
         pos[position] = sym
     end
+
+    def tie
+        
 
     def game_over
         if pos["1"].eql? pos["2"] and pos["2"].eql? pos["3"]
@@ -61,12 +65,9 @@ class Board
     end
 end
 
-board = Board.new
-# loop do
-#     m = gets.chomp
-#     if m.eql?("x")
-#         break
-#     end
-#     puts board.move_valid?(m)
-# end
-board.display
+
+# b = Board.new
+
+# m = gets.chomp
+
+# p b.move_valid?(m)
